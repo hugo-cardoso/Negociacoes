@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Negociações</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
@@ -32,12 +33,12 @@
         
         <button class="btn btn-primary" type="submit">Incluir</button>
     </form>
-    
+    <hr>
     <div class="text-center">
         <button class="btn btn-primary text-center" type="button">
             Importar Negociações
         </button>
-        <button class="btn btn-primary text-center" type="button">
+        <button onclick="negociacaoController.esvazia()" class="btn btn-primary text-center" type="button">
             Apagar
         </button>
     </div> 
