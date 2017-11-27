@@ -48,11 +48,12 @@ class NegociacaoController {
             this._negociacaoService.obterNegociacoesDaSemanaRetrasada()]
         )
         .then(negociacoes => {
+
             console.log(negociacoes)
             negociacoes
             .reduce((arrayAchatado, array) => arrayAchatado.concat(array), [])
             .forEach( negociacao => {
-             
+
                 this._listaNegociacoes.adiciona(negociacao);
                 this._mensagem.texto = "Negociações importadas com sucesso!"
             });

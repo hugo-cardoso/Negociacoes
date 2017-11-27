@@ -11,6 +11,8 @@ class NegociacaoService {
                 if( xhr.readyState == 4 ) {
                    
                     if ( xhr.status == 200 ) {
+
+                        console.log(xhr.responseText)
     
                         resolve(JSON.parse(xhr.responseText)
                         .map(objeto => new Negociacao( new Date(objeto.data), objeto.quantidade, objeto.valor)));
@@ -35,6 +37,8 @@ class NegociacaoService {
                 if( xhr.readyState == 4 ) {
                     
                     if ( xhr.status == 200 ) {
+
+                        console.log(xhr.responseText)
 
                         resolve(JSON.parse(xhr.responseText)
                         .map(objeto => new Negociacao( new Date(objeto.data), objeto.quantidade, objeto.valor)));
@@ -61,7 +65,9 @@ class NegociacaoService {
                     
                     if ( xhr.status == 200 ) {
 
-                        resolve( null, JSON.parse(xhr.responseText)
+                        console.log(xhr.responseText)
+
+                        resolve(JSON.parse(xhr.responseText)
                         .map(objeto => new Negociacao( new Date(objeto.data), objeto.quantidade, objeto.valor)));
                     } else {
 
